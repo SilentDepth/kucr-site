@@ -1,17 +1,62 @@
-html {
+html, body {
   height: 100%;
 }
 
 body {
   margin: 0;
   background: #EEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
 }
 
-#map {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+#content {
+  position: relative;
+  user-select: none;
+  font-size: 0;
+}
+
+#content h1 {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666;
+  position: absolute;
+  bottom: 100%;
+  margin: 0 0 4px;
+}
+
+#content h1 a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+  transition: color .1s linear;
+}
+
+#content h1 a:hover {
+  color: #000;
+}
+
+#content h1 sup {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+#content p {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+#content p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#content p a:hover {
+  text-decoration: underline;
 }
