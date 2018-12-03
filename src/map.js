@@ -1,3 +1,4 @@
+const DPR = window.devicePixelRatio || 1
 const WORLD_BLOCK_WIDTH = 4096
 const WORLD_BLOCK_HEIGHT = 4096
 const PIXEL_SIZE = 2
@@ -9,9 +10,12 @@ const MAP_TOP_LEFT = [-WORLD_CHUNK_WIDTH / 2, -WORLD_CHUNK_HEIGHT / 2]
 
 export default class Map {
   constructor (canvas) {
-    canvas.width = MAP_WIDTH + 2
-    canvas.height = MAP_HEIGHT + 2
+    canvas.width = (MAP_WIDTH + 2) * DPR
+    canvas.height = (MAP_HEIGHT + 2) * DPR
+    canvas.style.width = MAP_WIDTH + 2 + 'px'
+    canvas.style.height = MAP_HEIGHT + 2 + 'px'
     this.ctx = canvas.getContext('2d')
+    this.ctx.scale(DPR, DPR)
     this.ctx.strokeStyle = '#f0f'
     this.ctx.strokeRect(0, 0, MAP_WIDTH + 2, MAP_HEIGHT + 2)
     this.ctx.fillStyle = '#fff'
