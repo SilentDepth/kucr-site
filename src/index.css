@@ -23,7 +23,9 @@ body {
   color: #666;
   position: absolute;
   bottom: 100%;
-  margin: 0 0 4px;
+  margin: 0 0 8px;
+  line-height: 1;
+  text-shadow: 1px 1px #fff;
 }
 
 #content h1 a {
@@ -47,9 +49,10 @@ body {
   top: 100%;
   width: 100%;
   text-align: center;
-  margin: 4px 0 0;
+  margin: 8px 0 0;
   color: #666;
   font-size: 14px;
+  line-height: 1;
 }
 
 #content p a {
@@ -59,4 +62,29 @@ body {
 
 #content p a:hover {
   text-decoration: underline;
+}
+
+#buttons {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 8px;
+}
+
+#buttons button {
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 0;
+  color: #666;
+  cursor: pointer;
+  background: #f6f6f6;
+}
+
+#buttons button:hover {
+  color: #000;
+  background: #fff;
 }
