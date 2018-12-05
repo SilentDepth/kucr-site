@@ -1,0 +1,110 @@
+html, body
+  height: 100%
+
+body
+  margin: 0
+  background: #EEE
+  font-family: sans-serif
+
+buttonSize = 28px
+gapSize = 8px
+
+#main
+  min-width 100%
+  min-height 100%
+  width fit-content
+  height fit-content
+  padding (buttonSize + (gapSize * 2))
+  box-sizing: border-box
+  display flex
+  justify-content center
+  align-items center
+
+#content
+  flex: 0 0 auto
+  position: relative
+  user-select: none
+  font-size: 0
+
+  h1
+    font-size: 16px
+    font-weight: 300
+    color: #666
+    position: absolute
+    left 0
+    bottom 100%
+    margin: 0 0 gapSize
+    line-height: 1
+    text-shadow: 1px 1px #fff
+
+    a
+      text-decoration: none
+      font-weight: bold
+      color: inherit
+      transition: color .1s linear
+
+      &:hover
+        color: #000
+
+    sup
+      font-size: 12px
+      margin-left: 4px
+      line-height 0
+
+  p
+    position: absolute
+    top 100%
+    left: 0
+    width: 100%
+    text-align: center
+    margin: gapSize 0 0
+    color: #666
+    font-size: 14px
+    line-height: 1
+
+    a
+      text-decoration: none
+      color: inherit
+
+      &:hover
+        text-decoration: underline
+
+#buttons
+  position: absolute
+  top: 0
+  left 100%
+  margin-left gapSize
+  box-sizing: border-box
+
+  button
+    width: buttonSize
+    height: buttonSize
+    padding: 0
+    margin-bottom: gapSize
+    background: #f9f9f9
+    border: 1px solid #aaa
+    border-radius: 4px
+    cursor: pointer
+    position: relative
+
+    svg
+      width: 20px
+      height: 20px
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      margin: auto
+
+      .shape
+        fill: #666
+
+    &:hover
+      background: #fff
+      border-color: #999
+      box-shadow: 1px 1px 2px #ccc
+
+      svg
+        .shape
+          fill: #000

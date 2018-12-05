@@ -40,3 +40,16 @@ document.getElementById('zoom-in').addEventListener('click', () => {
 document.getElementById('zoom-out').addEventListener('click', () => {
   map.zoomOut()
 })
+
+document.addEventListener('keypress', ev => {
+  switch (ev.key) {
+    case '=':
+    case '+':
+      map.zoomIn()
+      break
+    case '-':
+    case '_':
+      map.zoomOut()
+      break
+  }
+})
